@@ -16,11 +16,11 @@ namespace SocialIntegration
         //private SocialMediaProviderType SocialMediaProviderType = SocialMediaProviderType.Facebook;
 
 
-        private const string FacebookAppId = "185496498241687";
-        private const string ClientSecret = "5a8688b78f9c039209d0ce4f59345936";
+        private const string FacebookAppId = "";
+        private const string ClientSecret = "";
 
-        private const string TwitterConsumerKey = "24OlU6wOSTV6KqMQgXpmg";
-        private const string TwitterConsumerSecret = "VmEbCKRgm8cLx9f8j9FbOGwNUfwd6uBksDJ47q0ysTs";
+        private const string TwitterConsumerKey = "";
+        private const string TwitterConsumerSecret = "";
 
         private Button btn_LoginWithFacebook, btn_LoginWithtwitter, btn_ShareWithFacebook, btn_ShareWithtwitter;
 
@@ -63,7 +63,7 @@ namespace SocialIntegration
         {
             try
             {
-                var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "https://demoflavius.azure-mobile.net");
+                var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "http://www.google.ro");
                 socialMediaProvider.Login(this);
             }
             catch (Exception ex)
@@ -76,7 +76,7 @@ namespace SocialIntegration
         {
             try
             {
-                var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "https://demoflavius.azure-mobile.net");
+                var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "http://www.google.ro");
                 var item = new Item
                 {
                     Text = "I'm sharing great things using #Xamarin #FTW!",
