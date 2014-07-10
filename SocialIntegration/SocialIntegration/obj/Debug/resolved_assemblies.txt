@@ -1,4 +1,0 @@
-C:\Users\Flavius-Radu\documents\visual studio 2013\Projects\SocialIntegration\SocialIntegration\bin\Debug\SocialIntegration.dll
-C:\Users\Flavius-Radu\documents\visual studio 2013\Projects\SocialIntegration\SocialIntegrationCore\bin\Debug\SocialIntegrationCore.dll
-C:\Users\Flavius-Radu\documents\visual studio 2013\Projects\SocialIntegration\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll
-C:\Users\Flavius-Radu\documents\visual studio 2013\Projects\SocialIntegration\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll
