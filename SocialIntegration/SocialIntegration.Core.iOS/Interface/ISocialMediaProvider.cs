@@ -12,7 +12,7 @@ namespace SocialIntegration.Core.iOS.Interface
         String AccessToken { get; set; }
 
         String AccessTokenSecret { get; set; }
-        void Login(UIViewController destinationActivity);
+        void Login(UIViewController viewController);
 
         Task<bool> Post(UIViewController destinationActivity, Item item);
     }

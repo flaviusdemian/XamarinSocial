@@ -25,7 +25,7 @@ namespace SocialIntegration.Core.iOS.Implementation
             _TwitterService.CallbackUrl = new Uri(callbackUrl);
         }
 
-        public void Login(UIViewController destinationActivity)
+        public void Login(UIViewController viewController)
         {
             try
             {
@@ -36,13 +36,14 @@ namespace SocialIntegration.Core.iOS.Implementation
                         _Account = account;
                         AccessToken = account.Properties["oauth_token"];
                         AccessTokenSecret = account.Properties["oauth_token_secret"];
-                        //DismissViewController (true, null);
+                        viewController.DismissViewController(true, null);
                     }
                 });
-                //PresentViewController(shareController, true, null);
+                viewController.PresentViewController(controler, true, null);
             }
             catch (Exception ex)
             {
+                var s = ex.StackTrace;
                 ex.ToString();
             }
         }

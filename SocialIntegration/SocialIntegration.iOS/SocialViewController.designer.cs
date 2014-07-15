@@ -20,15 +20,31 @@ namespace SocialIntegration.iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_FacebookShare { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn_TwitterLogin { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn_TwitterShare { get; set; }
 
 		[Action ("btn_FacebookLogin_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btn_FacebookLogin_TouchUpInside (UIButton sender);
 
+		[Action ("btn_FacebookShare_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn_FacebookShare_TouchUpInside (UIButton sender);
+
 		[Action ("btn_TwitterLogin_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btn_TwitterLogin_TouchUpInside (UIButton sender);
+
+		[Action ("btn_TwitterShare_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn_TwitterShare_TouchUpInside (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
@@ -36,9 +52,17 @@ namespace SocialIntegration.iOS
 				btn_FacebookLogin.Dispose ();
 				btn_FacebookLogin = null;
 			}
+			if (btn_FacebookShare != null) {
+				btn_FacebookShare.Dispose ();
+				btn_FacebookShare = null;
+			}
 			if (btn_TwitterLogin != null) {
 				btn_TwitterLogin.Dispose ();
 				btn_TwitterLogin = null;
+			}
+			if (btn_TwitterShare != null) {
+				btn_TwitterShare.Dispose ();
+				btn_TwitterShare = null;
 			}
 		}
 	}

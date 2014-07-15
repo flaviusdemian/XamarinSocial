@@ -1,14 +1,24 @@
 
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using SocialIntegration.Core.iOS.Implementation;
+using Xamarin.Social;
+using System.Threading.Tasks;
 
 namespace SocialIntegration.iOS
 {
     public partial class SocialViewController : UIViewController
     {
+        private const string FacebookAppId = "185496498241687";
+        private const string ClientSecret = "5a8688b78f9c039209d0ce4f59345936";
+
+        private const string TwitterConsumerKey = "24OlU6wOSTV6KqMQgXpmg";
+        private const string TwitterConsumerSecret = "VmEbCKRgm8cLx9f8j9FbOGwNUfwd6uBksDJ47q0ysTs";
+
         static bool UserInterfaceIdiomIsPhone
         {
             get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
@@ -58,14 +68,58 @@ namespace SocialIntegration.iOS
 
         #endregion
 
-        partial void btn_FacebookLogin_TouchUpInside(UIButton sender)
+        async partial void btn_FacebookLogin_TouchUpInside(UIButton sender)
         {
-
+            var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret, this);
+            socialMediaProvider.Login(this);
         }
 
-        partial void btn_TwitterLogin_TouchUpInside(UIButton sender)
+        async partial void btn_TwitterLogin_TouchUpInside(UIButton sender)
         {
+            var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "http://www.google.ro");
+            socialMediaProvider.Login(this);
+        }
 
+        async partial void btn_FacebookShare_TouchUpInside(UIButton sender)
+        {
+            try
+            {
+                var socialMediaProvider = new FacebookProvider(FacebookAppId, ClientSecret, this);
+                var item = new Item
+                {
+                    Text = "I'm sharing great things using #Xamarin #FTW!",
+                    Links = new List<Uri>
+                    {
+                        new Uri("http://xamarin.com"),
+                    },
+                };
+                Task.Factory.StartNew(() => { socialMediaProvider.Post(this, item); });
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+        }
+
+        async partial void btn_TwitterShare_TouchUpInside(UIButton sender)
+        {
+            try
+            {
+                var socialMediaProvider = new TwitterProvider(TwitterConsumerKey, TwitterConsumerSecret, "http://www.google.ro");
+                var item = new Item
+                {
+                    Text = "I'm sharing great things using #Xamarin #FTW!",
+                    Links = new List<Uri>
+                    {
+                        new Uri("http://xamarin.com"),
+                    },
+                };
+                await socialMediaProvider.Post(this, item);
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
         }
     }
 }

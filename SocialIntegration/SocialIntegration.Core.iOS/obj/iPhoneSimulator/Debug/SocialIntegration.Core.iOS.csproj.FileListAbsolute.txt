@@ -1,9 +1,0 @@
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\obj\iPhoneSimulator\Debug\SocialIntegration.Core.iOS.csprojResolveAssemblyReference.cache
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\SocialIntegrationCoreiOS.exe
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\SocialIntegrationCoreiOS.pdb
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\Xamarin.Auth.iOS.dll
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\Xamarin.Social.iOS.dll
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\Xamarin.Auth.iOS.xml
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\bin\iPhoneSimulator\Debug\Xamarin.Social.iOS.xml
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\obj\iPhoneSimulator\Debug\SocialIntegrationCoreiOS.exe
-C:\Users\Flavius\Projects\XamarinSocial\SocialIntegration\SocialIntegration.Core.iOS\obj\iPhoneSimulator\Debug\SocialIntegrationCoreiOS.pdb

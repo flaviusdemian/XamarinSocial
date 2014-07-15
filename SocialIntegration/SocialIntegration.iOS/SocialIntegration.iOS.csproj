@@ -98,18 +98,34 @@
     <InterfaceDefinition Include="Social.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PCL\PCL.csproj">
+      <Project>{aeccae1f-6e9d-4114-87c9-7038cc053471}</Project>
+      <Name>PCL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SocialIntegration.Core.iOS\SocialIntegration.Core.iOS.csproj">
       <Project>{c1159322-361f-440f-a663-7fed6caa7c51}</Project>
       <Name>SocialIntegration.Core.iOS</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <XamarinComponentReference Include="xamarin.social">
+      <Visible>False</Visible>
+      <Version>1.1.1</Version>
+    </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="Xamarin.Auth.iOS, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\xamarin.social-1.1.1\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Social.iOS, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Components\xamarin.social-1.1.1\lib\ios\Xamarin.Social.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

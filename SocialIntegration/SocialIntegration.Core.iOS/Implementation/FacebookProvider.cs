@@ -24,21 +24,24 @@ namespace SocialIntegration.Core.iOS.Implementation
             _FacebookService.ClientSecret = clientSecret;
         }
 
-        public void Login(UIViewController destinationActivity)
+        public void Login(UIViewController viewController)
         {
             try
             {
-                UIViewController contr4oller = _FacebookService.GetAuthenticateUI(account =>
+                UIViewController controler = _FacebookService.GetAuthenticateUI(account =>
                 {
                     if (account != null)
                     {
                         AccessToken = account.Properties["access_token"];
                         _Account = account;
+                        viewController.DismissViewController(true, null);
                     }
                 });
+                viewController.PresentViewController(controler, true, null);
             }
             catch (Exception ex)
             {
+                var s = ex.StackTrace;
                 ex.ToString();
             }
         }
@@ -69,6 +72,7 @@ namespace SocialIntegration.Core.iOS.Implementation
             }
             catch (Exception ex)
             {
+                var s = ex.StackTrace;
                 ex.ToString();
             }
             return result;

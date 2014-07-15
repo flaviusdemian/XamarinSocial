@@ -1,2 +1,7 @@
 /SocialIntegration/SocialIntegration/obj
 /SocialIntegration/SocialIntegrationCore/obj
+/SocialIntegration/PCL/obj
+/SocialIntegration/SocialIntegration.Android/*
+/SocialIntegration/SocialIntegration.Core.Android/obj
+/SocialIntegration/SocialIntegration.Core.iOS/*
+/SocialIntegration/SocialIntegration.iOS/*
