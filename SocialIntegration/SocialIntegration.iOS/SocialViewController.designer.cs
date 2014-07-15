@@ -16,38 +16,46 @@ namespace SocialIntegration.iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_FacebookLogin { get; set; }
+		MonoTouch.UIKit.UIButton bnt_MobileServices { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_FacebookShare { get; set; }
+		MonoTouch.UIKit.UIButton btn_FacebookLogin { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_TwitterLogin { get; set; }
+		MonoTouch.UIKit.UIButton btn_FacebookShare { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIButton btn_TwitterShare { get; set; }
+		MonoTouch.UIKit.UIButton btn_TwitterLogin { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		MonoTouch.UIKit.UIButton btn_TwitterShare { get; set; }
 
 		[Action ("btn_FacebookLogin_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void btn_FacebookLogin_TouchUpInside (UIButton sender);
+		partial void btn_FacebookLogin_TouchUpInside (MonoTouch.UIKit.UIButton sender);
 
 		[Action ("btn_FacebookShare_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void btn_FacebookShare_TouchUpInside (UIButton sender);
+		partial void btn_FacebookShare_TouchUpInside (MonoTouch.UIKit.UIButton sender);
 
 		[Action ("btn_TwitterLogin_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void btn_TwitterLogin_TouchUpInside (UIButton sender);
+		partial void btn_TwitterLogin_TouchUpInside (MonoTouch.UIKit.UIButton sender);
 
 		[Action ("btn_TwitterShare_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void btn_TwitterShare_TouchUpInside (UIButton sender);
+		partial void btn_TwitterShare_TouchUpInside (MonoTouch.UIKit.UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (bnt_MobileServices != null) {
+				bnt_MobileServices.Dispose ();
+				bnt_MobileServices = null;
+			}
 			if (btn_FacebookLogin != null) {
 				btn_FacebookLogin.Dispose ();
 				btn_FacebookLogin = null;
