@@ -5,3 +5,5 @@
 /SocialIntegration/SocialIntegration.Core.Android/obj
 /SocialIntegration/SocialIntegration.Core.iOS/*
 /SocialIntegration/SocialIntegration.iOS/*
+/SocialIntegration/PCL/bin
+/SocialIntegration/SocialIntegration.Core.Android/bin
