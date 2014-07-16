@@ -47,31 +47,18 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.WindowsAzure.Mobile">
-      <HintPath>..\Components\azure-mobile-services-1.2.2\lib\android\Microsoft.WindowsAzure.Mobile.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.WindowsAzure.Mobile.Ext">
-      <HintPath>..\Components\azure-mobile-services-1.2.2\lib\android\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\Components\azure-mobile-services-1.2.2\lib\android\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\Components\azure-mobile-services-1.2.2\lib\android\System.Net.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\Components\azure-mobile-services-1.2.2\lib\android\System.Net.Http.Primitives.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Xamarin.Auth.Android">
+    <Reference Include="Xamarin.Auth.Android, Version=1.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Auth.Android.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Social.Android">
+    <Reference Include="Xamarin.Social.Android, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Components\xamarin.social-1.1.1\lib\android\Xamarin.Social.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -82,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\layout_mobile_services.axml">
@@ -101,7 +89,7 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponentReference Include="azure-mobile-services">
+    <XamarinComponentReference Include="xamarin.auth">
       <Visible>False</Visible>
       <Version>1.2.2</Version>
     </XamarinComponentReference>

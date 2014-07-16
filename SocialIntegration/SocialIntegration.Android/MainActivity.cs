@@ -27,7 +27,7 @@ namespace SocialIntegration
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.layout_social_services);
 
             // Get our button from the layout resource,
             // and attach an event to it
